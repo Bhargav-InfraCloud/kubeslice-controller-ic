@@ -66,6 +66,8 @@ type ClusterProperty struct {
 	GeoLocation GeoLocation `json:"geoLocation,omitempty"`
 	//Monitoring contains the Kubernetes Monitoring Dashboard
 	Monitoring Monitoring `json:"monitoring,omitempty"`
+	// SliceGatewayEdge's external loadbalancer's annotations
+	ExternalLoadbalancerAnnotations map[string]string `json:"externalLoadbalancerAnnotations"`
 }
 
 // Telemetry defines the field of ClusterSpec

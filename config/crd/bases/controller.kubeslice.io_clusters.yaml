@@ -38,6 +38,11 @@ spec:
               clusterProperty:
                 description: put in an object
                 properties:
+                  externalLoadbalancerAnnotations:
+                    additionalProperties:
+                      type: string
+                    description: SliceGatewayEdge's external loadbalancer's annotations
+                    type: object
                   geoLocation:
                     description: GeoLocation contains information regarding Geographical
                       Location of the Cluster
@@ -92,6 +97,8 @@ spec:
                         description: TelemetryProvider is the Telemetry Provider information
                         type: string
                     type: object
+                required:
+                - externalLoadbalancerAnnotations
                 type: object
               networkInterface:
                 description: NetworkInterface is the network interface attached with
